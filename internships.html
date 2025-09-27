@@ -6,33 +6,6 @@
     <title>Internships - Priyansha's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2.5rem;
-        }
-        .internship {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-        }
-        a {
-            color: #ff8c00;
-            text-decoration: none;
-            font-weight: bold;
-        }
         .menu {
             position: absolute;
             top: 20px;
@@ -66,14 +39,65 @@
         .menu-content a:hover {
             background: rgba(255, 255, 255, 0.2);
         }
-    </style>
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu-content");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
-        }
-    </script>
+        </style>
+        <script>
+            function toggleMenu() {
+                var menu = document.getElementById("menu-content");
+                menu.style.display = menu.style.display === "block" ? "none" : "block";
+            }
+        </script>
 
+    <style>
+        body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: white;
+        text-align: center;
+        }
+        .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 40px 20px;
+        }
+        h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        }
+        .grid {
+        display: grid;
+        grid-template-columns: 1fr; /* one per row for readability */
+        gap: 30px;
+        }
+        .card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: left;
+        }
+        .card img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        }
+        .card h2 {
+        margin: 10px 0;
+        font-size: 1.3rem;
+        color: #ffcc66;
+        }
+        .card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        }
+        a {
+        color: #ff8c00;
+        text-decoration: none;
+        font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="menu">
@@ -83,31 +107,33 @@
             <a href="projects.html">Projects</a>
             <a href="internships.html">Internships</a>
             <a href="about.html">About Me</a>
-            <a href="robotics.html">Robotics</a>
         </div>
     </div>
+
     <div class="container">
-        <h1>My Internships</h1>
-        <div class="grid">
-            <div class="card" onclick="location.href='internship1.html'">
-                <img src="Drone_delivery_station.gif" alt="Canopus Drone Pod">
-                <h2>Mechanical Design Intern- Reude Technologies (May 2025 - July 2025</h2>
-                <p>Conducted system feasibility analysis for Canopus drone pod. Canopus drone pod is a new product being manufactured by reude technolgies that aims to automate delivery of packages using their high payload drones. As an intern, I had to do design calculations for package lifting mechanism, conveyor mechanism, and redesign the conveyor mechanism.</p>
-            </div>
-            <div class="card" onclick="location.href='internship2.html'">
-                <img src="ORB_SLAM3 execution.png" alt="ORB SLAM 3 execution">
-                <h2>Robotics Intern</h2>
-                <p>As a robotics intern at iHub Drishti, Jodhpur, I developed simulations in ROS and Gazebo for autonomous path planning of
- the Clearpath Husky UGV. I also studdied embodied agents. I  Benchmarked 4 vSLAM methods (Monocular, Mono-Inertial, Stereo, Stereo-Inertial) using ORBSLAM3. </p>
-            </div>
-            <div class="card" onclick="location.href='internship2.html'">
-                
-                <h2>Intern - Insights Autotech COnsultants</h2>
-                <p>At IAC, I worked on mechanical design, and relevant research related to an electric motorcycle. Worked as business development intern, playing pivotal role in market research, sales strategy, production planning, layout and process planning</p>
-            </div>
-        </div>
-        <br>
-        <a href="index.html">Back to Home</a>
+    <h1>My Internships</h1>
+    <div class="grid">
+
+      <div class="card">
+        <img src="images/reude_internship.png" alt="Reude Internship">
+        <h2>Mechanical Design Intern — Reude Technologies (May 2025 – July 2025)</h2>
+        <p>Conducted system feasibility analysis for Canopus drone pod. Worked on design calculations for packaging lifting mechanism, conveyor mechanism, and redesign of the conveyor system.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/ihub_internship.png" alt="Robotics Internship">
+        <h2>Robotics Intern — iHub Drishti (June 2024 – Aug 2024)</h2>
+        <p>Developed simulations in ROS and Gazebo for Clearpath Husky UGV. Benchmarked vSLAM methods (Monocular, Stereo, Inertial variants) using ORB-SLAM3.</p>
+      </div>
+
+      <div class="card">
+        <h2>Intern — Insights Autotech Consultants (May 2023 – Sept 2023)</h2>
+        <p>Worked on mechanical design, market research, and sales strategy. Gained experience in production planning and process optimization.</p>
+      </div>
+
     </div>
+    <br>
+    <a href="index.html">Back to Home</a>
+  </div>
 </body>
 </html>
