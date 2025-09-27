@@ -15,96 +15,76 @@
             text-align: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
         h1 {
             font-size: 2.5rem;
+            margin-bottom: 30px;
         }
-        .project {
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
             background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card h2 {
+            margin: 15px 0 10px;
+            font-size: 1.2rem;
+        }
+        .card p {
+            font-size: 0.9rem;
+            padding: 0 10px 20px;
         }
         a {
             color: #ff8c00;
             text-decoration: none;
             font-weight: bold;
         }
-        .menu {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-        .menu-button {
-            background: #ff8c00;
-            border: none;
-            padding: 10px 15px;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .menu-content {
-            display: none;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            border-radius: 5px;
-            position: absolute;
-            top: 40px;
-            left: 0;
-            width: 150px;
-        }
-        .menu-content a {
-            display: block;
-            color: white;
-            padding: 5px;
-            text-decoration: none;
-        }
-        .menu-content a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
     </style>
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu-content");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
-        }
-    </script>
-
 </head>
 <body>
-    <div class="menu">
-        <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
-        <div class="menu-content" id="menu-content">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="internships.html">Internships</a>
-            <a href="about.html">About Me</a>
-        </div>
-    </div>
     <div class="container">
         <h1>My Projects</h1>
-        <div class="project">
-            <h2>Data Driven Study of Mental Health of University Students</h2>
-            <p>Using Machine Learning to assess mental health trends in university students at MNIT.</p>
+        <div class="grid">
+            <div class="card" onclick="location.href='project1.html'">
+                <img src="thumbnails/mental_health.jpg" alt="Mental Health Project">
+                <h2>Data Driven Study of Mental Health</h2>
+                <p>Machine Learning study on mental health of MNIT students.</p>
+            </div>
+            <div class="card" onclick="location.href='project2.html'">
+                <img src="thumbnails/bike_robot.jpg" alt="Bike Robot">
+                <h2>Self Balancing Bike Robot</h2>
+                <p>Simulated a bike robot with PID control.</p>
+            </div>
+            <div class="card" onclick="location.href='project3.html'">
+                <img src="thumbnails/food_waste.jpg" alt="Food Waste Management">
+                <h2>Food Waste Management System</h2>
+                <p>Tracked hostel food wastage with sensors.</p>
+            </div>
+            <div class="card" onclick="location.href='project4.html'">
+                <img src="thumbnails/wastewater.jpg" alt="Wastewater Management">
+                <h2>Decentralized Wastewater Management</h2>
+                <p>Purification model for train wastewater using centrifugation.</p>
+            </div>
         </div>
-        <div class="project">
-            <h2>Self Balancing Bike Robot</h2>
-            <p>Simulated a self-balancing bike using PID control.</p>
-        </div>
-        <div class="project">
-            <h2>Food Waste Management System</h2>
-            <p>Developed a data acquisition system to track hostel food wastage using sensors.</p>
-        </div>
-        <div class="project">
-            <h2>Decentralized Wastewater Management</h2>
-            <p>Designed a model for wastewater purification in trains using centrifugation.</p>
-        </div>
+        <br>
         <a href="index.html">Back to Home</a>
     </div>
-    
 </body>
 </html>
