@@ -87,44 +87,34 @@
         .btn:hover {
             background: #ff6500;
         }
-        .profile-pic {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            margin-bottom: 20px;
-        }
         .cv-container {
-            margin-top: 20px;
+            margin-top: 0px;
             width: 80%;
             max-width: 800px;
         }
         .cv-container iframe {
             width: 100%;
-            height: 100px;
+            height: 700px;
             border: none;
             border-radius: 10px;
         }
     </style>
 </head>
-<body>
-    <div class="menu">
-        <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
-        <div class="menu-content" id="menu-content">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="internships.html">Internships</a>
-            <a href="about.html">About Me</a>
-        </div>
+<div class="menu">
+    <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+    <div class="menu-content" id="menu-content">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="internships.html">Internships</a>
+        <a href="about.html">About Me</a>
     </div>
+</div>
+<body>
     <div class="container">
-        <img src="Me.jpg" alt="Priyansha" class="profile-pic">
-        <h1>Hi, I'm Priyansha</h1>
-        <p>Engineering Student | Robotics Enthusiast | Researcher</p>
-        <a href="projects.html" class="btn">Explore My Work</a>
-        <a href="CV.html" class="btn" download>View My CV</a>
-        <a href="about.html" class="btn">Learn More About Me</a>
+        <h1>View my CV</h1>
+        <div class="cv-container">
+            <iframe src="PRIYANSHA_2022UME1762.pdf"></iframe>
+        </div>
     </div>
 </body>
 </html>

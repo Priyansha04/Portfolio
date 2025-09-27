@@ -3,8 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Priyansha's Portfolio</title>
+    <title>Internships - Priyansha's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .menu-button {
+            background: #ff8c00;
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .menu-content {
+            display: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 150px;
+        }
+        .menu-content a {
+            display: block;
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+        }
+        .menu-content a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        </style>
+        <script>
+            function toggleMenu() {
+                var menu = document.getElementById("menu-content");
+                menu.style.display = menu.style.display === "block" ? "none" : "block";
+            }
+        </script>
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -15,7 +57,7 @@
             text-align: center;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: auto;
             padding: 40px 20px;
         }
@@ -25,36 +67,37 @@
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsive 3-column grid */
             gap: 20px;
         }
         .card {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-        .card:hover {
-            transform: scale(1.05);
+            padding: 20px;
+            text-align: left;
         }
         .card img {
+            display: block;
             width: 100%;
-            height: 180px;
-            object-fit: cover;
+            max-height: 200px;   /* scale down image height */
+            object-fit: cover;   /* crop nicely without distortion */
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
+
         .card h2 {
-            margin: 15px 0 10px;
-            font-size: 1.2rem;
+        margin: 10px 0;
+        font-size: 1.3rem;
+        color: #ffcc66;
         }
         .card p {
-            font-size: 0.9rem;
-            padding: 0 10px 20px;
+        font-size: 0.95rem;
+        line-height: 1.6;
         }
         a {
-            color: #ff8c00;
-            text-decoration: none;
-            font-weight: bold;
+        color: #ff8c00;
+        text-decoration: none;
+        font-weight: bold;
         }
     </style>
 </head>
@@ -66,35 +109,40 @@
             <a href="projects.html">Projects</a>
             <a href="internships.html">Internships</a>
             <a href="about.html">About Me</a>
-            <a href="robotics.html">Robotics</a>
         </div>
     </div>
+
     <div class="container">
-        <h1>My Projects</h1>
-        <div class="grid">
-            <div class="card" onclick="location.href='project1.html'">
-                <img src="robotArm.jpg" alt="Robot Arm">
-                <h2>Dummy 1</h2>
-                <p>Dummy ddummy dum dum dummy dummy</p>
-            </div>
-            <div class="card" onclick="location.href='project2.html'">
-                <img src="thumbnails/bike_robot.jpg" alt="Bike Robot">
-                <h2>Dummy 2</h2>
-                <p>Dummy ddummy dum dum dummy dummy</p>
-            </div>
-            <div class="card" onclick="location.href='project3.html'">
-                <img src="thumbnails/food_waste.jpg" alt="Food Waste Management">
-                <h2>Food Waste Management System</h2>
-                <p>Tracked hostel food wastage with sensors.</p>
-            </div>
-            <div class="card" onclick="location.href='project4.html'">
-                <img src="thumbnails/wastewater.jpg" alt="Wastewater Management">
-                <h2>Decentralized Wastewater Management</h2>
-                <p>Purification model for train wastewater using centrifugation.</p>
-            </div>
+    <h1>My Projects</h1>
+    <div class="grid">
+
+        <div class="card">
+            <img src="Bot-L.png" alt="Spider bot-L">
+            <h2>Spider-inspred Quadruped Robot</h2>
+            <p> Design and prototyping of a quadruped spider robot for coordinated locomotion.</p>
         </div>
-        <br>
-        <a href="index.html">Back to Home</a>
+
+        <div class="card">
+            <img src="LiDAR mount.png" alt="LiDAR mount">
+            <h2>Design of rotating LiDAR mount</h2>
+            <p>Designed a stepper motor driven rotating mount for spider robot. The mount has been designed to enable the robot to capture 3D data using 2D spinning LiDAR.</p>
+        </div>
+        
+        <div class="card" onclick="location.href='project2.html'">
+            <img src="robotArm.jpg" alt="Robot Arm">
+            <h2>Robot Arm</h2>
+            <p>Design and kinematics of robot arm using Arduino, esp32, and servo motors.</p>
+        </div>
+
+        <div class="card" onclick="location.href='cameracase.html'">
+            <img src="camera case.png" alt="camera case">
+            <h2>Design of Camera case</h2>
+            <p>Designed a snap-fit camera case with cooling fins. The assembly consists of only two parts and can be easily 3D printed</p>
+        </div>
+
     </div>
+    <br>
+    <a href="index.html">Back to Home</a>
+  </div>
 </body>
 </html>
