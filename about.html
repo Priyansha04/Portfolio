@@ -10,7 +10,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background: linear-gradient(135deg, #ac58bf, #2a5298);
             color: white;
             text-align: center;
         }
@@ -22,28 +22,86 @@
         h1 {
             font-size: 2.5rem;
         }
-        .project {
+        .about {
             background: rgba(255, 255, 255, 0.1);
             padding: 15px;
             margin: 10px 0;
             border-radius: 10px;
         }
         a {
-            color: #ff8c00;
+            color: #0022ff;
             text-decoration: none;
             font-weight: bold;
         }
+        .menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .menu-button {
+            background: #f5f6f8;
+            border: none;
+            padding: 10px 15px;
+            color: rgb(182, 32, 182);
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .menu-content {
+            display: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 150px;
+        }
+        .menu-content a {
+            display: block;
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+        }
+        .menu-content a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
     </style>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu-content");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+   
 </head>
 <body>
+    <div class="menu">
+        <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+        <div class="menu-content" id="menu-content">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="internships.html">Internships</a>
+            <a href="about.html">About Me</a>
+            <a href="about.html">About Me</a>
+        </div>
+    </div>
     <div class="container">
         <h1>About Me</h1>
         <div class="about">
             <h2>Mehcanical Engineer, Robotics Engineer, Environement Enthusiast</h2>
             <p>Hello! I am a third year engineering student pursuing a BTech in mechanical engineering with honors in Robotics and Automation from NIT Jaipur.</p>
+            <p>I love robots, animals, nature, cool mechanisms and learning new things. I am also a trained Bharatnatyam dancer and Hindustani Classical singer. I love poetry and expressing myself. I strongly believe in living by a grand purpose but living for the little things in life!</p>
         </div>
-        
-        <a href="index.html">Back to Home</a>
+        <div class="about">
+            <h2>Words that Describe me Best are:</h2>
+            <p>Curious, Bold, Compassionate, Creative, Outspoken and Interactive, Proactive, and Driven</p>
+        </div>
+        <div class="about">
+            <h2>Goal in Life</h2>
+            <p>My goal in life is to transform the current state of the planet with global warming, pollution, and climate change to one where all different creatures coexist. A world where technological progress does not come at a cost of environmental conservation</p>
+        </div>
+
     </div>
 </body>
 </html>

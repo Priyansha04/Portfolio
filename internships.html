@@ -33,9 +33,59 @@
             text-decoration: none;
             font-weight: bold;
         }
+        .menu {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .menu-button {
+            background: #ff8c00;
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .menu-content {
+            display: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 150px;
+        }
+        .menu-content a {
+            display: block;
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+        }
+        .menu-content a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
     </style>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu-content");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
 </head>
 <body>
+    <div class="menu">
+        <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+        <div class="menu-content" id="menu-content">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="internships.html">Internships</a>
+            <a href="about.html">About Me</a>
+            <a href="robotics.html">Robotics</a>
+        </div>
+    </div>
     <div class="container">
         <h1>My Internships</h1>
         <div class="internship">
